@@ -1,0 +1,14 @@
+Desenvolva uma sistema que atenda aos requisitos do arquivo em anexo
+
+Critérios de Avaliação:
+•	Pontualidade da entrega;
+•	Criatividade, objetividade e otimização na resolução do problema, definição das classes;
+•	Uso dos conceitos de OO 
+•	Devem existir classes DAO e Classes bean.
+•	Deve-se utilizar MVC no desenvolvimento
+•	Procure utilizar o máximo possível dos conceitos vistos em sala de aula. 
+•	As informações devem ficar salvas em banco de dados.
+•	Apresentação, Layout;
+•	Questionamentos durante a apresentação do trabalho 
+Observações:
+Nas seguintes situações será atribuída nota zero ao trabalho: trabalho não entregue, trabalho copiado, ou parcialmente copiado, trabalho igual ao de outro colega.
