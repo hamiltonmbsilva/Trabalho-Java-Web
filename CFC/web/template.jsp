@@ -143,7 +143,7 @@ Author     : Hamil
                                                         <li><a href="single-page.html">Single Page</a></li>
                                                 </ul>
                                         </li>
-                                        <li><a href="contact-page.html">Contact</a></li>
+                                        <li><a href="contact-page.html">Contato</a></li>
                                 </ul>
                         </nav> <!-- end .main-nav -->
                         <form class="header-search-form">
@@ -157,7 +157,7 @@ Author     : Hamil
         <a href="" class="responsive-menu-close">Close <i class="fa fa-times"></i></a>
         <nav class="responsive-nav"></nav> <!-- end .responsive-nav -->
         <form class="search-form">
-                <input type="search" id="responsive-menu-search" name="search" placeholder="Search Here">
+                <input type="search" id="responsive-menu-search" name="search" placeholder="Pesquisa">
                 <button type="submit"><i class="fa fa-search"></i></button>
         </form> <!-- end .search-form -->
 </div> <!-- end .responsive-menu -->
@@ -166,11 +166,7 @@ Author     : Hamil
 <div id="homeslider" class="flexslider homeslider">
         <div class="slides">
                 <div style="background-image: url('images/slider04.jpg');">
-                        <div class="caption blue">
-                                <h4>Learn Safe and Get Your License</h4>
-                                <p>DrivePro is the best driving school. We have very well trained instructors.</p>
-                                <p><a href="">Find Out More <i class="fa fa-angle-double-right"></i></a></p>
-                        </div> <!-- end .caption -->
+                       
                 </div>
 <!--                <div style="background-image: url('images/slider01.jpg');">
                         <div class="caption blue">
@@ -202,9 +198,9 @@ Author     : Hamil
 
                         <!-- Services -->
                         <div class="heading text-center">
-                                <h3>Some Awesome Features</h3>
+                                <h3>Alguns recursos Interessantes</h3>
                                 <hr class="line" />
-                                <span>Our Driving School Provide Some Unique Features For Our Leaners</span>
+                                <span>Nossa Escola de Condução Fornece Algumas Características Únicas Para Nossos Alunos</span>
                         </div> <!-- end .heading -->
                         <div class="row">
                                 <div class="col-sm-4">
@@ -213,7 +209,7 @@ Author     : Hamil
                                                         <div class="inner"><i class="fa fa-bullhorn"></i></div>
                                                 </div> <!-- end .icon -->
                                                 <div class="content">
-                                                        <h5>Best Safety Measures</h5>
+                                                        <h5>Melhores medidas de segurança</h5>
                                                         <p>Lorem ipsum Sunt cupidatat reprehenderit cillum reprehenderit incididunt consequat aute et proident tempor occaecat.</p>
                                                         <p><a href="">Read More <i class="fa fa-angle-double-right"></i></a></p>
                                                 </div> <!-- end .content -->
@@ -225,7 +221,7 @@ Author     : Hamil
                                                         <div class="inner"><i class="fa fa-users"></i></div>
                                                 </div> <!-- end .icon -->
                                                 <div class="content">
-                                                        <h5>Experienced Instructors</h5>
+                                                        <h5>Experientes Instrutores</h5>
                                                         <p>Lorem ipsum Sunt cupidatat reprehenderit cillum reprehenderit incididunt consequat aute et proident tempor occaecat.</p>
                                                         <p><a href="">Read More <i class="fa fa-angle-double-right"></i></a></p>
                                                 </div> <!-- end .content -->
@@ -237,7 +233,7 @@ Author     : Hamil
                                                         <div class="inner"><i class="fa fa-clock-o"></i></div>
                                                 </div> <!-- end .icon -->
                                                 <div class="content">
-                                                        <h5>Perfect Timing</h5>
+                                                        <h5>No momento ideal</h5>
                                                         <p>Lorem ipsum Sunt cupidatat reprehenderit cillum reprehenderit incididunt consequat aute et proident tempor occaecat.</p>
                                                         <p><a href="">Read More <i class="fa fa-angle-double-right"></i></a></p>
                                                 </div> <!-- end .content -->
@@ -251,7 +247,7 @@ Author     : Hamil
                                                         <div class="inner"><i class="fa fa-money"></i></div>
                                                 </div> <!-- end .icon -->
                                                 <div class="content">
-                                                        <h5>Affordable Fee</h5>
+                                                        <h5>Taxa acessível</h5>
                                                         <p>Lorem ipsum Sunt cupidatat reprehenderit cillum reprehenderit incididunt consequat aute et proident tempor occaecat.</p>
                                                         <p><a href="">Read More <i class="fa fa-angle-double-right"></i></a></p>
                                                 </div> <!-- end .content -->
@@ -263,7 +259,7 @@ Author     : Hamil
                                                         <div class="inner"><i class="fa fa-play-circle-o"></i></div>
                                                 </div> <!-- end .icon -->
                                                 <div class="content">
-                                                        <h5>Video Classes</h5>
+                                                        <h5>Aulas em vídeo</h5>
                                                         <p>Lorem ipsum Sunt cupidatat reprehenderit cillum reprehenderit incididunt consequat aute et proident tempor occaecat.</p>
                                                         <p><a href="">Read More <i class="fa fa-angle-double-right"></i></a></p>
                                                 </div> <!-- end .content -->
@@ -275,7 +271,7 @@ Author     : Hamil
                                                         <div class="inner"><i class="fa fa-credit-card"></i></div>
                                                 </div> <!-- end .icon -->
                                                 <div class="content">
-                                                        <h5>Quick License</h5>
+                                                        <h5>Licença Rápida</h5>
                                                         <p>Lorem ipsum Sunt cupidatat reprehenderit cillum reprehenderit incididunt consequat aute et proident tempor occaecat.</p>
                                                         <p><a href="">Read More <i class="fa fa-angle-double-right"></i></a></p>
                                                 </div> <!-- end .content -->
@@ -293,9 +289,9 @@ Author     : Hamil
 
                         <!-- Instructors -->
                         <div class="heading text-center">
-                                <h3>Our Instrucotrs & Testers</h3>
+                                <h3>Nossos instrutores e testadores</h3>
                                 <hr class="line" />
-                                <span>Top Instructors From Californina</span>
+                                <span>Melhores instrutores de Matias Barbosa</span>
                         </div> <!-- end .heading -->
                         <div class="row">
                                 <div class="col-sm-3">
@@ -307,7 +303,7 @@ Author     : Hamil
                                                 </div> <!-- end .image -->
                                                 <div class="bio">
                                                         <h5>Jason Lin</h5>
-                                                        <span>Instructor</span>
+                                                        <span>Instrutor</span>
                                                 </div> <!-- end .bio -->
                                                 <div class="social-icons blue">
                                                         <div class="social-icon"><a href=""><i class="fa fa-facebook"></i></a></div>
@@ -326,7 +322,7 @@ Author     : Hamil
                                                 </div> <!-- end .image -->
                                                 <div class="bio">
                                                         <h5>Wilson Jim</h5>
-                                                        <span>Instructor</span>
+                                                        <span>Instrutor</span>
                                                 </div> <!-- end .bio -->
                                                 <div class="social-icons blue">
                                                         <div class="social-icon"><a href=""><i class="fa fa-facebook"></i></a></div>
@@ -345,7 +341,7 @@ Author     : Hamil
                                                 </div> <!-- end .image -->
                                                 <div class="bio">
                                                         <h5>Eva Brown</h5>
-                                                        <span>Tester</span>
+                                                        <span>Aplicador de Teste</span>
                                                 </div> <!-- end .bio -->
                                                 <div class="social-icons blue">
                                                         <div class="social-icon"><a href=""><i class="fa fa-facebook"></i></a></div>
@@ -364,7 +360,7 @@ Author     : Hamil
                                                 </div> <!-- end .image -->
                                                 <div class="bio">
                                                         <h5>Martin Gil</h5>
-                                                        <span>Instructor</span>
+                                                        <span>Instrutor</span>
                                                 </div> <!-- end .bio -->
                                                 <div class="social-icons blue">
                                                         <div class="social-icon"><a href=""><i class="fa fa-facebook"></i></a></div>
@@ -386,9 +382,9 @@ Author     : Hamil
 
                         <!-- Instructors -->
                         <div class="heading text-center">
-                                <h3>Courses We Offer</h3>
+                                <h3>Cursos que oferecemos</h3>
                                 <hr class="line" />
-                                <span>Our Driving School Provide Best Courses For Our Learners</span>
+                                <span>Nossa Escola de Condução Fornece Melhores Cursos Para Nossos Alunos</span>
                         </div> <!-- end .heading -->
                         <div class="row">
                                 <div class="col-sm-3">
@@ -396,11 +392,11 @@ Author     : Hamil
                                                 <div class="course-icon">
                                                         <div class="inner"><div class="inner"><i class="fa fa-male"></i></div></div> <!-- end .inner -->
                                                 </div> <!-- end .course-icon -->
-                                                <h5>Teen Courses</h5>
+                                                <h5>Cursos para Adolescentes</h5>
                                                 <div class="course-info">
-                                                        <h5>Teen Courses</h5>
+                                                        <h5>Cursos para Adolescentes</h5>
                                                         <p>Lorem ipsum In aute occaecat Ut commodo id. Lorem ipsum Cillum cillum esse labore irure mollit tempor culpa.</p>
-                                                        <p><a href="">Apply Now <i class="fa fa-angle-double-right"></i></a></p>
+                                                        <p><a href="">Aplicar agora <i class="fa fa-angle-double-right"></i></a></p>
                                                 </div> <!-- end .course-info -->
                                         </div> <!-- end .course -->
                                 </div> <!-- end .col-sm-3 -->
@@ -409,9 +405,9 @@ Author     : Hamil
                                                 <div class="course-icon">
                                                         <div class="inner"><div class="inner"><i class="fa fa-car"></i></div></div> <!-- end .inner -->
                                                 </div> <!-- end .course-icon -->
-                                                <h5>Defensive Courses</h5>
+                                                <h5>Cursos Defensivos</h5>
                                                 <div class="course-info">
-                                                        <h5>Defensive Courses</h5>
+                                                        <h5>Cursos Defensivos</h5>
                                                         <p>Lorem ipsum In aute occaecat Ut commodo id. Lorem ipsum Cillum cillum esse labore irure mollit tempor culpa.</p>
                                                         <p><a href="">Apply Now <i class="fa fa-angle-double-right"></i></a></p>
                                                 </div> <!-- end .course-info -->
@@ -422,9 +418,9 @@ Author     : Hamil
                                                 <div class="course-icon">
                                                         <div class="inner"><div class="inner"><i class="fa fa-wheelchair"></i></div></div> <!-- end .inner -->
                                                 </div> <!-- end .course-icon -->
-                                                <h5>Handicap Courses</h5>
+                                                <h5>Cursos de Handicap</h5>
                                                 <div class="course-info">
-                                                        <h5>Handicap Courses</h5>
+                                                        <h5>Cursos de Handicap</h5>
                                                         <p>Lorem ipsum In aute occaecat Ut commodo id. Lorem ipsum Cillum cillum esse labore irure mollit tempor culpa.</p>
                                                         <p><a href="">Apply Now <i class="fa fa-angle-double-right"></i></a></p>
                                                 </div> <!-- end .course-info -->
@@ -435,9 +431,9 @@ Author     : Hamil
                                                 <div class="course-icon">
                                                         <div class="inner"><div class="inner"><i class="fa fa-truck"></i></div></div> <!-- end .inner -->
                                                 </div> <!-- end .course-icon -->
-                                                <h5>Crash Courses</h5>
+                                                <h5>Cursos para caminhão</h5>
                                                 <div class="course-info">
-                                                        <h5>Crash Courses</h5>
+                                                        <h5>Cursos para caminhão</h5>
                                                         <p>Lorem ipsum In aute occaecat Ut commodo id. Lorem ipsum Cillum cillum esse labore irure mollit tempor culpa.</p>
                                                         <p><a href="">Apply Now <i class="fa fa-angle-double-right"></i></a></p>
                                                 </div> <!-- end .course-info -->
@@ -455,9 +451,9 @@ Author     : Hamil
 
                         <!-- Testimonials -->
                         <div class="heading text-center">
-                                <h3>Trusted By Thousands</h3>
+                                <h3>Olha o que falam da gente!</h3>
                                 <hr class="line" />
-                                <span>Satisfied Customer Feedback</span>
+                                <span>Feedback do nossos clientes</span>
                         </div> <!-- end .heading -->
                         <div class="row">
                                 <div class="col-sm-6">
@@ -514,9 +510,9 @@ Author     : Hamil
 
                         <!-- Pricing Tables -->
                         <div class="heading text-center">
-                                <h3>Our Pricing</h3>
+                                <h3>Nossos preços</h3>
                                 <hr class="line" />
-                                <span>We have Three Packages For Our learners</span>
+                                <span>Nós temos três pacotes para nossos alunos</span>
                         </div> <!-- end .heading -->
                         <div class="row">
                                 <div class="col-sm-4">
@@ -524,7 +520,7 @@ Author     : Hamil
                                                 <div class="inner">
                                                         <div class="pricing-table-price">
                                                                 <div class="inner">
-                                                                        <span>$200</span>
+                                                                        <span>R$1200</span>
                                                                 </div> <!-- end .inner -->
                                                         </div> <!-- end .pricing-table-price -->
                                                         <div class="pricing-table-heading">
@@ -550,7 +546,7 @@ Author     : Hamil
                                                 <div class="inner">
                                                         <div class="pricing-table-price">
                                                                 <div class="inner">
-                                                                        <span>$350</span>
+                                                                        <span>R$1550</span>
                                                                 </div> <!-- end .inner -->
                                                         </div> <!-- end .pricing-table-price -->
                                                         <div class="pricing-table-heading">
@@ -576,7 +572,7 @@ Author     : Hamil
                                                 <div class="inner">
                                                         <div class="pricing-table-price">
                                                                 <div class="inner">
-                                                                        <span>$400</span>
+                                                                        <span>R$1800</span>
                                                                 </div> <!-- end .inner -->
                                                         </div> <!-- end .pricing-table-price -->
                                                         <div class="pricing-table-heading">
@@ -609,16 +605,16 @@ Author     : Hamil
 
                         <!-- Links -->
                         <div class="heading text-center">
-                                <h3>Any Help?</h3>
+                                <h3>Quer ajuda?</h3>
                                 <hr class="line" />
-                                <span>We Have A Special Team To Help Our Customers</span>
+                                <span>Nós temos uma equipe especial para ajudar nossos clientes</span>
                         </div> <!-- end .heading -->
                         <div class="row">
                                 <div class="col-sm-4">
                                         <div class="link clearfix">
                                                 <div class="content">
                                                         <i class="fa fa-file-text"></i>
-                                                        <span>Apply And Pay Online</span>
+                                                        <span>Inscreva-se e pague on-line</span>
                                                 </div> <!-- end .content -->
                                                 <div class="arrow"><a href=""><i class="fa fa-chevron-right"></i></a></div> <!-- end .arrow -->
                                         </div> <!-- end .link -->
@@ -627,7 +623,7 @@ Author     : Hamil
                                         <div class="link clearfix">
                                                 <div class="content">
                                                         <i class="fa fa-credit-card"></i>
-                                                        <span>Get Your License</span>
+                                                        <span>Obtenha sua licença rapido</span>
                                                 </div> <!-- end .content -->
                                                 <div class="arrow"><a href=""><i class="fa fa-chevron-right"></i></a></div> <!-- end .arrow -->
                                         </div> <!-- end .link -->
@@ -636,7 +632,7 @@ Author     : Hamil
                                         <div class="link clearfix">
                                                 <div class="content">
                                                         <i class="fa fa-question-circle"></i>
-                                                        <span>Make an Inquiry</span>
+                                                        <span>Faça a nós questionamento</span>
                                                 </div> <!-- end .content -->
                                                 <div class="arrow"><a href=""><i class="fa fa-chevron-right"></i></a></div> <!-- end .arrow -->
                                         </div> <!-- end .link -->
@@ -652,7 +648,7 @@ Author     : Hamil
         <div class="container">
                 <div class="newsletter clearfix">
                         <div class="newsletter-icon"><i class="fa fa-envelope"></i></div>
-                        <h3>Newsletter</h3>
+                        <h3>Boletim de Notícias</h3>
                         <form action="https://johneyboy.us7.list-manage.com/subscribe/post-json?u=3210d74dbf054134a29daf97c&amp;id=50ad235761&amp;c=?" method="get" target="_blank" id="mc-embedded-subscribe-form" class="newsletter-form">
                                 <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Your Email" />
                                 <input type="submit" id="mc-embedded-subscribe" name="subscribe" value="Go" class="button dark" />
@@ -681,8 +677,8 @@ Author     : Hamil
                 <div class="row">
                         <div class="col-sm-3">
                                 <div class="widget">
-                                        <h5>About</h5>
-                                        <p>DrivePro is the best driving school. We have well trained instructors. DrivePro is the best driving school.</p>
+                                        <h5>Sobre nós</h5>
+                                        <p>DO CFC Driver é a melhor escola de direção. Temos instrutores bem treinados. DrivePro é a melhor escola de condução.</p>
                                         <div class="social-icons">
                                                 <div class="social-icon"><a href=""><i class="fa fa-facebook"></i></a></div>
                                                 <div class="social-icon"><a href=""><i class="fa fa-twitter"></i></a></div>
@@ -695,35 +691,35 @@ Author     : Hamil
                                 <div class="widget">
                                         <h5>Categories</h5>
                                         <ul class="list-unstyled">
-                                                <li><a href="">Driving</a></li>
-                                                <li><a href="">Exam</a></li>
-                                                <li><a href="">Instruction</a></li>
-                                                <li><a href="">Instructor</a></li>
-                                                <li><a href="">License</a></li>
+                                                <li><a href="">Dirigindo</a></li>
+                                                <li><a href="">Exame</a></li>
+                                                <li><a href="">Instrução</a></li>
+                                                <li><a href="">Instrutor</a></li>
+                                                <li><a href="">Licensa</a></li>
                                         </ul>
                                 </div> <!-- end .widget -->
                         </div> <!-- end .col-sm-2 -->
                         <div class="col-sm-3">
                                 <div class="widget">
-                                        <h5>Latest Post</h5>
+                                        <h5>Última postagem</h5>
                                         <div class="latest-post clearfix">
                                                 <img src="images/latest01.jpg" alt="alt" class="img-responsive">
                                                 <div>
-                                                        <h6><a href="">Tips To Drive Safe</a></h6>
+                                                        <h6><a href="">Dicas para dirigir com segurança</a></h6>
                                                         <span>Jan 5, 2014</span>
                                                 </div>
                                         </div> <!-- end .latest-post -->
                                         <div class="latest-post clearfix">
                                                 <img src="images/latest02.jpg" alt="alt" class="img-responsive">
                                                 <div>
-                                                        <h6><a href="">We Like Races Here</a></h6>
+                                                        <h6><a href="">Nós gostamos de corridas aqui</a></h6>
                                                         <span>Jan 5, 2014</span>
                                                 </div>
                                         </div> <!-- end .latest-post -->
                                         <div class="latest-post clearfix">
                                                 <img src="images/latest03.jpg" alt="alt" class="img-responsive">
                                                 <div>
-                                                        <h6><a href="">Defensive Course</a></h6>
+                                                        <h6><a href="">Curso Defensivo</a></h6>
                                                         <span>Jan 5, 2014</span>
                                                 </div>
                                         </div> <!-- end .latest-post -->
@@ -743,7 +739,7 @@ Author     : Hamil
                                 </div> <!-- end .widget -->
                         </div> <!-- end .col-sm-3 -->
                 </div> <!-- end .row -->
-                <div class="copyright">&copy; 2015 DrivePro All Rights Reserved.</div>
+                <div class="copyright">&copy; 2018 CFC DRIVE .</div>
         </div> <!-- end .container -->
 </footer> <!-- end .footer -->
 
