@@ -14,6 +14,10 @@ Author     : Hamil
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 <!--    <meta name="description" content="">
@@ -99,6 +103,9 @@ Author     : Hamil
                                         </a>
                                     </div>
                                  </c:if>
+                                
+    
+    
                         </div> <!-- end .social-icons -->                       
                        
                 </div> <!-- end .container -->
@@ -927,7 +934,7 @@ main content start
 
 </section>
 <! --/wrapper -->
-</section> /MAIN CONTENT 
+<!--</section> /MAIN CONTENT 
 main content end
 footer start
 <footer class="site-footer">
@@ -974,4 +981,4 @@ $('select.styled').customSelect();
 
 </body>
 </html>
-
+-->

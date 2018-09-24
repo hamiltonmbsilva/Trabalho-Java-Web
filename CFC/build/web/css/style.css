@@ -2691,3 +2691,12 @@ div:hover>.small-round-icon {
   font-size: 20px;
   padding-left: 15em;
 }
+
+.sub-menu1{
+    
+  float: right;
+  padding-top: 0.8em;
+  font-size: 50px;
+  
+  padding-left:2em;
+}
