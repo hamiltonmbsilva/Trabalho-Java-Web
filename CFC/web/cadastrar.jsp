@@ -29,37 +29,75 @@
         <link href="layout/assets/css/style-responsive.css" rel="stylesheet">
     </head>
     <body>
-       <form action="control" method="POST">
-        <input type="hidden" name="ac" value="gravarUser"/>
-        <div class="form-group">
-            <label for="matricula">Matricula:</label>
-            <input id="matricula" name="matricula" class="form-control" type="text"
-                   placeholder="Digite a matricula...">
+        
+        <div id="login-page">
+	  <div class="container">
+                <form action="control" method="POST">
+                 <input type="hidden" name="ac" value="gravarUser"/> 
+                 <h2 class="form-login-heading">Pre-Cadastro</h2>
+                 <div class="form-group">
+                     <label for="nome">Nome Completo:</label>
+                     <input id="nome" name="nome" class="form-control" type="text"
+                            placeholder="Digite o seu nome complelto...">
+                 </div>                 
+                   <div class="form-group">
+                     <label for="login">Login</label>
+                     <input id="login" name="login" class="form-control" type="text" placeholder="Digite o Login...">
+                 </div>
+                   <div class="form-group">
+                     <label for="senha">Senha</label>
+                     <input id="senha" name="senha" class="form-control" type="text" placeholder="Digite o Senha...">
+                 </div>
+                 <div class="form-group">
+                     <label for="email">Email:</label>
+                     <input id="email" class="form-control" name="email" type="email" placeholder="Digite o Login...">
+                 </div>
+                 <div class="form-group">
+                     <label for="rua">Nome da Rua:</label>
+                     <input id="rua" class="form-control" name="rua" type="text" placeholder="Digite a Rua...">
+                 </div>
+                 <div class="form-group">
+                     <label for="numero">Numero:</label>
+                     <input id="numero" class="form-control" name="numero" type="number" placeholder="Digite o Login...">
+                 </div>
+                 <div class="form-group">
+                     <label for="complemento">Complemento:</label>
+                     <input id="complemento" class="form-control" name="complemento" type="text" placeholder="Digite o Complemento...">
+                 </div>
+                 <div class="form-group">
+                     <label for="bairro">Bairro:</label>
+                     <input id="bairro" class="form-control" name="bairro" type="text" placeholder="Digite o Bairro...">
+                 </div>
+                 <div class="form-group">
+                     <label for="cidade">Cidade:</label>
+                     <input id="cidade" class="form-control" name="cidade" type="text" placeholder="Digite a Cidade...">
+                 </div>
+                 <div class="form-group">
+                     <label for="estado">Estado:</label>
+                     <input id="estado" class="form-control" name="estado" type="text" placeholder="Digite o Estado...">
+                 </div>
+                 <div>
+                     <button class="btn btn-primary" type="submit"> Salvar</button>
+                 </div>
+             </form>
+          </div>
         </div>
-        <div class="form-group">
-            <label for="nome">Nome Completo:</label>
-            <input id="nome" name="nome" class="form-control" type="text"
-                   placeholder="Digite o nome complelto...">
-        </div>
-        <div class="form-group">
-            <label for="cpf">CPF:</label>
-            <input id="cpf" name="cpf" class="form-control" type="text" placeholder="Digite o CPF...">
-        </div>
-          <div class="form-group">
-            <label for="login">Login</label>
-            <input id="login" name="login" class="form-control" type="text" placeholder="Digite o Login...">
-        </div>
-          <div class="form-group">
-            <label for="senha">Senha</label>
-            <input id="senha" name="senha" class="form-control" type="text" placeholder="Digite o Senha...">
-        </div>
-        <div class="form-group">
-            <label for="dt_nasc">Data Nascimento:</label>
-            <input id="dt_nasc" class="form-control" name="dt_nasc" type="date">
-        </div>
-        <div>
-            <button class="btn btn-primary" type="submit"> Salvar</button>
-        </div>
-    </form>
+        
+        <script src="layout/assets/js/jquery.js"></script>
+        <script src="layout/assets/js/bootstrap.min.js"></script>
+        <script src="layout/assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+        <script src="layout/assets/js/jquery.ui.touch-punch.min.js"></script>
+        <script class="include" type="text/javascript" src="layout/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+        <script src="layout/assets/js/jquery.scrollTo.min.js"></script>
+        <script src="layout/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+        <!--common script for all pages-->
+        <script src="layout/assets/js/common-scripts.js"></script>
+        <script src="layout/assets/js/jquery.backstretch.min.js" type="text/javascript"></script>
+            <script>
+                $.backstretch("../imagens/fundo.jpeg", {speed: 500});
+            </script>
+
     </body>
 </html>

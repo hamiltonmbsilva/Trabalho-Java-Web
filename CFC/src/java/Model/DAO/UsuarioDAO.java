@@ -39,8 +39,9 @@ public class UsuarioDAO extends DaoGeneric{
         EntityManager em = null;
         try {
             em = open();
-            String jpql = "SELECT u FROM Usuario u "
-                    + "where u.login = :log and u.senha = :sen ";  
+            String jpql = "SELECT u FROM Usuario u WHERE "
+                    + "u.usuarioPK.loginIdlogin = :loginIdlogin and "
+                    + "u.usuarioPk.login = :log and u.usuarioPk.senha = : sen"; 
             
             Query q = em.createQuery(jpql);
             q.setParameter("log", login);

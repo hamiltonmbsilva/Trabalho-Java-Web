@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `db_cfcweb` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `db_cfcweb`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: db_cfcweb
@@ -32,15 +34,6 @@ CREATE TABLE `atendente` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `atendente`
---
-
-LOCK TABLES `atendente` WRITE;
-/*!40000 ALTER TABLE `atendente` DISABLE KEYS */;
-/*!40000 ALTER TABLE `atendente` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `endereco`
 --
 
@@ -57,15 +50,6 @@ CREATE TABLE `endereco` (
   PRIMARY KEY (`idendereco`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `endereco`
---
-
-LOCK TABLES `endereco` WRITE;
-/*!40000 ALTER TABLE `endereco` DISABLE KEYS */;
-/*!40000 ALTER TABLE `endereco` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `login`
@@ -86,15 +70,6 @@ CREATE TABLE `login` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `login`
---
-
-LOCK TABLES `login` WRITE;
-/*!40000 ALTER TABLE `login` DISABLE KEYS */;
-/*!40000 ALTER TABLE `login` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `professor`
 --
 
@@ -112,15 +87,6 @@ CREATE TABLE `professor` (
   CONSTRAINT `fk_professor_usuario1` FOREIGN KEY (`usuario_idusuario`) REFERENCES `usuario` (`idusuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `professor`
---
-
-LOCK TABLES `professor` WRITE;
-/*!40000 ALTER TABLE `professor` DISABLE KEYS */;
-/*!40000 ALTER TABLE `professor` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `tabela_aula`
@@ -148,15 +114,6 @@ CREATE TABLE `tabela_aula` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tabela_aula`
---
-
-LOCK TABLES `tabela_aula` WRITE;
-/*!40000 ALTER TABLE `tabela_aula` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tabela_aula` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `tabela_preco`
 --
 
@@ -170,15 +127,6 @@ CREATE TABLE `tabela_preco` (
   PRIMARY KEY (`idtabela_preco`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tabela_preco`
---
-
-LOCK TABLES `tabela_preco` WRITE;
-/*!40000 ALTER TABLE `tabela_preco` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tabela_preco` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `usuario`
@@ -209,15 +157,6 @@ CREATE TABLE `usuario` (
   CONSTRAINT `fk_usuario_tabela_preco1` FOREIGN KEY (`tabela_preco_idtabela_preco`) REFERENCES `tabela_preco` (`idtabela_preco`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usuario`
---
-
-LOCK TABLES `usuario` WRITE;
-/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -228,4 +167,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-13 20:43:45
+-- Dump completed on 2018-09-13 21:26:50
