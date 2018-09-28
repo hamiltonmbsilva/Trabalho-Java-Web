@@ -5,10 +5,12 @@
  */
 package Controller.Central;
 
+import Controller.Action.AreaAlunoAction;
 import Controller.Action.CadUsuarioViewAction;
 import Controller.Action.HomeViewAction;
 import Controller.Action.LoginViewAction;
 import Controller.Action.LogoutAction;
+import Controller.Action.SaveUsuarioAction;
 import Controller.Action.ValidaLoginAction;
 import Controlles.Actions.Faces.ICommander;
 import java.io.IOException;
@@ -37,6 +39,8 @@ public class CentralController extends HttpServlet {
         tabela.put("validaLogin", new ValidaLoginAction());
         tabela.put("logout", new LogoutAction());
         tabela.put("cadUsuario", new CadUsuarioViewAction());
+        tabela.put("saveUsuario", new SaveUsuarioAction());
+        tabela.put("areaAluno", new AreaAlunoAction());
     }
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

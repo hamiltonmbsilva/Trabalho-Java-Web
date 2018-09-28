@@ -5,7 +5,7 @@
  */
 package Model.DAO;
 
-import Model.Usuario;
+import Model.Classe.Usuario;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -34,52 +34,55 @@ public class UsuarioDAO extends DaoGeneric{
         
     }
     
-    public Usuario validaLogin(String login, String senha) {
-        
-        EntityManager em = null;
-        try {
-            em = open();
-            String jpql = "SELECT u FROM Usuario u WHERE "
-                    + "u.usuarioPK.loginIdlogin = :loginIdlogin and "
-                    + "u.usuarioPk.login = :log and u.usuarioPk.senha = : sen"; 
-            
-            Query q = em.createQuery(jpql);
-            q.setParameter("log", login);
-            q.setParameter("sen", senha);
-            
-            Usuario a = (Usuario) q.getSingleResult();
-            
-            return a;
-            
-        }catch(NoResultException e){
-            return null;
-        }catch(NonUniqueResultException e){
-            return null;
-        }
-        finally {
-             if(em != null){
-                em.close();
-            }
-        }
-    }
+//    public Usuario validaLogin(String login, String senha) {
+//        
+//        EntityManager em = null;
+//        try {
+//            em = open();
+//            String jpql = "SELECT l FROM Login l "
+//                    + "WHERE l.idlogin = :log and l.senha = :sen ";
+//
+//                    
+//                    //"select distinct u.idlogin from Usuario u inner join u.idlogin l "
+//                    //+ "where u = :log and l.senha = :sen ";
+//            
+//            Query q = em.createQuery(jpql);
+//            q.setParameter("log", login);
+//            q.setParameter("sen", senha);
+//            
+//            Usuario a = (Usuario) q.getSingleResult();
+//            
+//            return a;
+//            
+//        }catch(NoResultException e){
+//            return null;
+//        }catch(NonUniqueResultException e){
+//            return null;
+//        }
+//        finally {
+//             if(em != null){
+//                em.close();
+//            }
+//        }
+//    }
     
     //Buscando a lista de todas a matriculas
-    public List<Usuario> getUsuarioPK(Usuario a) {
-        EntityManager em = null;
-        try {
-            em = open();
-            
-           Usuario usuario = em.getReference(Usuario.class, a.getUsuarioPK());
-            //esta passando o paramentro para a função
-           
-            
-            return (List<Usuario>) usuario.getUsuarioPK();
-            
-        } finally {
-            if(em!=null){
-                em.close();
-            }
-        }
-    }
+//    public List<Usuario> getIdusuario(Usuario a) {
+//        EntityManager em = null;
+//        try {
+//            em = open();
+//            
+//           Usuario usuario = em.getReference(Usuario.class, a.getIdusuario());
+//            //esta passando o paramentro para a função
+//           
+//            
+//            return (List<Usuario>) usuario.;
+//            
+//        } finally {
+//            if(em!=null){
+//                em.close();
+//            }
+//        }
+//    }
     
 }

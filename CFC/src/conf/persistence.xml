@@ -9,6 +9,20 @@
     <class>Model.TabelaAula</class>
     <class>Model.Professor</class>
     <class>Model.TabelaPreco</class>
+    <class>Model.Classe.TabelaPreco</class>
+    <class>Model.Classe.Professor</class>
+    <class>Model.Classe.Login</class>
+    <class>Model.Classe.Usuario</class>
+    <class>Model.Classe.Atendente</class>
+    <class>Model.Classe.Endereco</class>
+    <class>Model.Classe.TabelaAula</class>
+    <class>Controller.Action.Atendente</class>
+    <class>Controller.Action.Professor</class>
+    <class>Controller.Action.TabelaAula</class>
+    <class>Controller.Action.Endereco</class>
+    <class>Controller.Action.Login</class>
+    <class>Controller.Action.Usuario</class>
+    <class>Controller.Action.TabelaPreco</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db_cfcweb?zeroDateTimeBehavior=convertToNull"/>

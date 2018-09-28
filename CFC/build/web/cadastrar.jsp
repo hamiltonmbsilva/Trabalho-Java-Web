@@ -33,7 +33,7 @@
         <div id="login-page">
 	  <div class="container">
                 <form action="control" method="POST">
-                 <input type="hidden" name="ac" value="gravarUser"/> 
+                 <input type="hidden" name="ac" value="saveUsuario"/> 
                  <h2 class="form-login-heading">Pre-Cadastro</h2>
                  <div class="form-group">
                      <label for="nome">Nome Completo:</label>

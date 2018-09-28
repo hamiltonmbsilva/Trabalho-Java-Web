@@ -6,8 +6,10 @@
 package Controller.Action;
 
 import Controlles.Actions.Faces.ICommander;
+import Model.Classe.Login;
 import Model.DAO.UsuarioDAO;
-import Model.Usuario;
+import Model.Classe.Usuario;
+import Model.DAO.LoginDAO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -23,7 +25,7 @@ public class ValidaLoginAction  implements  ICommander{
         String login = request.getParameter("login");
         String senha = request.getParameter("senha");
         
-        Usuario a = new UsuarioDAO().validaLogin(login,senha);
+        Login a = new LoginDAO().validaLogin(login,senha);
         
         if(a == null){
             request.setAttribute("info", "Login e senha Incorreta");
@@ -31,7 +33,7 @@ public class ValidaLoginAction  implements  ICommander{
         }else{
             
             request.getSession().setAttribute("user", a);
-            new HomeViewAction().executar(request, response);
+            new AreaAlunoAction().executar(request, response);
         }
     
     }
