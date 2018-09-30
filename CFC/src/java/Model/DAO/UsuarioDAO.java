@@ -5,7 +5,9 @@
  */
 package Model.DAO;
 
+import Model.Classe.TabelaAula;
 import Model.Classe.Usuario;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -32,6 +34,23 @@ public class UsuarioDAO extends DaoGeneric{
             }
         }
         
+    }
+    
+    public List<TabelaAula> getAll() {
+        EntityManager em = null;
+        try {
+            em = open();
+
+            Query q = em.createNamedQuery("TabelaAula.findAll");
+
+            return q.getResultList();
+        } catch (Exception e) {
+            return new ArrayList<>();
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }
     }
     
 //    public Usuario validaLogin(String login, String senha) {

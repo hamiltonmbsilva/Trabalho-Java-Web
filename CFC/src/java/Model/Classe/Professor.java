@@ -8,7 +8,6 @@ package Model.Classe;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -44,7 +43,7 @@ public class Professor implements Serializable {
     @JoinColumn(name = "login_idlogin", referencedColumnName = "idlogin", nullable = false)
     @ManyToOne(optional = false)
     private Login loginIdlogin;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "professorIdprofessor")
+    @OneToMany(mappedBy = "professorIdprofessor")
     private List<TabelaAula> tabelaAulaList;
 
     public Professor() {

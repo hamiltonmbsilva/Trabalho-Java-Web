@@ -84,7 +84,7 @@ Author     : Hamil
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="about-us.html">Sobre</a></li>
                                         <li><a href="services.html">Serviços</a></li>
-                                        <li><a href="contact-page.html">Contato</a></li>
+                                        <li><a href="control?ac=cadUsuario">Pre-matricula</a></li>
                                 </ul>
                         </nav> <!-- end .top-nav -->
                         <div class="social-icons yellow">
@@ -103,6 +103,7 @@ Author     : Hamil
                                         </a>
                                     </div>
                                  </c:if>
+                                
                                 
     
     
@@ -126,6 +127,7 @@ Author     : Hamil
                                 <div class="small-round-icon"><i class="fa fa-phone"></i></div>
                                 +32 3273-0000
                         </div>  <!-- end .header-contact -->
+                        
                 </div> <!-- end .header-contacts -->
                 <a href="" class="responsive-menu-open">Menu <i class="fa fa-bars"></i></a>
         </div> <!-- end .container -->

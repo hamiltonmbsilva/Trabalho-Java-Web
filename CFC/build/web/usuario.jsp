@@ -3,7 +3,8 @@
     Created on : 28/09/2018, 02:38:57
     Author     : Hamil
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="java.io.File"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,7 @@
         <meta name="author" content="Dashboard">
         <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-        <title>Web Aluno</title>
+        <title>CFC DRIVE</title>
 
         <!-- Bootstrap core CSS -->
         <link href="layout/assets/css/bootstrap.css" rel="stylesheet">
@@ -24,6 +25,7 @@
         <!-- Custom styles for this template -->
         <link href="layout/assets/css/style.css" rel="stylesheet">
         <link href="layout/assets/css/style-responsive.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicons/favicon.ico">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -38,11 +40,12 @@
                     <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
                 </div> 
                <!--logo start-->
-                <a href="index.html" class="logo"><b>Web Aluno</b></a>
+                <a href="index.html" class="logo"><img src="images/logo.png" class="img-circle"
+                                                                        width="100"></a>
                 <!--logo end-->
                 <div class="top-menu">
                     <ul class="nav pull-right top-menu">
-                        <li><a class="logout" href="login.html">Logout</a></li>
+                        <li><a class="logout" href="login.jsp?page=login">Logout</a></li>
                     </ul>
                 </div>
             </header>
@@ -53,16 +56,16 @@
                     <!-- sidebar menu start-->
                     <ul class="sidebar-menu" id="nav-accordion">
 
-                        <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle"
+                        <p class="centered"><a href="profile.html"><img src="images/logo.png" class="img-circle"
                                                                         width="60"></a></p>
                         <h5 class="centered">
                             <c:if test="${sessionScope.user != null}">
                                 ${sessionScope.user.nome} - 
                             </c:if>                            
-                            Web Aluno</h5>
+                            CFC DRIVE</h5>
 
                         <li class="mt">
-                            <a href="control">
+                            <a href="usuario.jsp?page=home">
                                 <i class="fa fa-dashboard"></i>
                                 <span>Home</span>
                             </a>
@@ -73,45 +76,71 @@
                                     <i class="fa fa-dashboard"></i>
                                     <span>Login</span>
                                 </a>
-                            </li>
-
+                            </li>                        
+                        </c:if>
+                          
+                            <c:if test="${sessionScope.login == usu}">
                         <li class="sub-menu">
-                            <a href="control?ac=cadAluno">
+                            <a href="usuario.jsp?page=marcarAulasSecured">
                                 <i class="fa fa-cogs"></i>
-                                <span>Cadastre-se</span>
+                                <span>Marcar Aulas</span>
                             </a>
                         </li>
                         </c:if>
                         <c:if test="${sessionScope.user != null}">
-                            <li class="sub-menu">
-                                <a href="control?ac=matricularSecured">
-                                    <i class="fa fa-dashboard"></i>
-                                    <span>Matricular</span>
-                                </a>
-                            </li>
-                            <li class="sub-menu">
-                                <a href="control?ac=logout">
-                                    <i class="fa fa-dashboard"></i>
-                                    <span>Logout</span>
-                                </a>
-                            </li>
-                        </c:if>
-                        <!--                        <li class="sub-menu">
-                                                    <a href="professor.html">
-                                                        <i class="fa fa-cogs"></i>
-                                                        <span>Professor</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sub-menu">
-                                                    <a href="professor.html">
-                                                        <i class="fa fa-cogs"></i>
-                                                        <span>Disciplina</span>
-                                                    </a>
-                                                </li>-->
+                        <li class="sub-menu">
+                            <a href="control?ac=cadAluno">
+                                <i class="fa fa-cogs"></i>
+                                <span>Marcar Simulado</span>
+                            </a>
+                        </li>
+                         </c:if>
+                        <li class="sub-menu">
+                            <a href="control?ac=cadAluno">
+                                <i class="fa fa-cogs"></i>
+                                <span>Verificar Notas</span>
+                            </a>
+                        </li>  
+                        
+                        
+                            
+                        
                     </ul>
                     <!-- sidebar menu end-->
                 </div>
             </aside>
+                            
+                            
+            <section id="main-content">
+                <section class="wrapper site-min-height" id="marcarAulas">
+                    <h3><i class="fa fa-angle-right"></i> 
+                        <c:if test="${requestScope.user != null}">
+                         
+                            ${sessionScope.user.nome}
+                        </c:if></h3> 
+                        
+                    <div class="row mt">
+                        <div class="col-lg-12">    
+                            <c:if test="${param.page == null}">
+                                <jsp:include page="home.jsp" />
+                            </c:if>
+                            <c:if test="${param.page != null}">
+                                <jsp:include page="marcarAula.jsp" />
+                            </c:if> 
+                        </div>
+                        <div class="col-lg-12">    
+                                                    
+
+
+                        </div>
+                    </div>
+
+                </section>
+                <! --/wrapper -->
+            </section>                
+                            
+                            
+                            
             <!--sidebar end-->
             <!--main content start-->
 <!--          retirado um texto de section

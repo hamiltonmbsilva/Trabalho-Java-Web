@@ -10,6 +10,7 @@ import Model.Classe.Login;
 import Model.DAO.UsuarioDAO;
 import Model.Classe.Usuario;
 import Model.DAO.LoginDAO;
+import static java.awt.SystemColor.control;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -35,6 +36,8 @@ public class ValidaLoginAction  implements  ICommander{
             request.getSession().setAttribute("user", a);
             new AreaAlunoAction().executar(request, response);
         }
+        
+        
     
     }
     

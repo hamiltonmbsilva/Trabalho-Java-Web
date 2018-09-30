@@ -89,6 +89,7 @@ public class Endereco implements Serializable {
         this.cidade = cidade;
         this.estado = estado;
         this.bairro = bairro;
+        
     }
     
     

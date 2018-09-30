@@ -71,21 +71,12 @@ public class Usuario implements Serializable {
     @JoinColumn(name = "login_idlogin", referencedColumnName = "idlogin")
     @ManyToOne
     private Login loginIdlogin;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuarioIdusuario")
+    @OneToMany(mappedBy = "usuarioIdusuario")
     private List<TabelaAula> tabelaAulaList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuarioIdusuario")
     private List<TabelaPreco> tabelaPrecoList;
 
     public Usuario() {
-    }
-
-    public Usuario(Integer idusuario) {
-        this.idusuario = idusuario;
-    }
-
-    public Usuario(Integer idusuario, String email) {
-        this.idusuario = idusuario;
-        this.email = email;
     }
 
     public Usuario(String email, String cpf, String rg, String ativado, String dataNascimento, String nota, String qtdaulaTeorica, String qtdaulaPratica) {
@@ -98,8 +89,16 @@ public class Usuario implements Serializable {
         this.qtdaulaTeorica = qtdaulaTeorica;
         this.qtdaulaPratica = qtdaulaPratica;
     }
+
     
-    
+    public Usuario(Integer idusuario) {
+        this.idusuario = idusuario;
+    }
+
+    public Usuario(Integer idusuario, String email) {
+        this.idusuario = idusuario;
+        this.email = email;
+    }
 
     public Integer getIdusuario() {
         return idusuario;

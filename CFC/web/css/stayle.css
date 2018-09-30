@@ -1,0 +1,18 @@
+h3{
+    margin:0.3em;
+    padding:0.3em;
+}
+
+.btn-custom{
+ border: none;   
+}
+
+#toolbar-admin{
+    display: none;
+}
+
+#tabela{
+    padding: 0px;
+    margin: 0px;
+}
+

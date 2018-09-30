@@ -32,7 +32,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "TabelaAula.findByAulaTeorica", query = "SELECT t FROM TabelaAula t WHERE t.aulaTeorica = :aulaTeorica")
     , @NamedQuery(name = "TabelaAula.findByAulaPratica", query = "SELECT t FROM TabelaAula t WHERE t.aulaPratica = :aulaPratica")
     , @NamedQuery(name = "TabelaAula.findByMarcarSimulado", query = "SELECT t FROM TabelaAula t WHERE t.marcarSimulado = :marcarSimulado")
-    , @NamedQuery(name = "TabelaAula.findByAulaDada", query = "SELECT t FROM TabelaAula t WHERE t.aulaDada = :aulaDada")})
+    , @NamedQuery(name = "TabelaAula.findByDataTeorica", query = "SELECT t FROM TabelaAula t WHERE t.dataTeorica = :dataTeorica")
+    , @NamedQuery(name = "TabelaAula.findByDataPratica", query = "SELECT t FROM TabelaAula t WHERE t.dataPratica = :dataPratica")})
 public class TabelaAula implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -41,23 +42,21 @@ public class TabelaAula implements Serializable {
     @Basic(optional = false)
     @Column(name = "idtabela_aula", nullable = false)
     private Integer idtabelaAula;
-    @Basic(optional = false)
-    @Column(name = "aula_teorica", nullable = false, length = 20)
+    @Column(name = "aula_teorica", length = 20)
     private String aulaTeorica;
-    @Basic(optional = false)
-    @Column(name = "aula_pratica", nullable = false, length = 20)
+    @Column(name = "aula_pratica", length = 20)
     private String aulaPratica;
-    @Basic(optional = false)
-    @Column(name = "marcar_simulado", nullable = false, length = 20)
+    @Column(name = "marcar_simulado", length = 20)
     private String marcarSimulado;
-    @Basic(optional = false)
-    @Column(name = "aula_dada", nullable = false)
-    private short aulaDada;
-    @JoinColumn(name = "professor_idprofessor", referencedColumnName = "idprofessor", nullable = false)
-    @ManyToOne(optional = false)
+    @Column(name = "data_teorica", length = 12)
+    private String dataTeorica;
+    @Column(name = "data_pratica", length = 12)
+    private String dataPratica;
+    @JoinColumn(name = "professor_idprofessor", referencedColumnName = "idprofessor")
+    @ManyToOne
     private Professor professorIdprofessor;
-    @JoinColumn(name = "usuario_idusuario", referencedColumnName = "idusuario", nullable = false)
-    @ManyToOne(optional = false)
+    @JoinColumn(name = "usuario_idusuario", referencedColumnName = "idusuario")
+    @ManyToOne
     private Usuario usuarioIdusuario;
 
     public TabelaAula() {
@@ -65,14 +64,6 @@ public class TabelaAula implements Serializable {
 
     public TabelaAula(Integer idtabelaAula) {
         this.idtabelaAula = idtabelaAula;
-    }
-
-    public TabelaAula(Integer idtabelaAula, String aulaTeorica, String aulaPratica, String marcarSimulado, short aulaDada) {
-        this.idtabelaAula = idtabelaAula;
-        this.aulaTeorica = aulaTeorica;
-        this.aulaPratica = aulaPratica;
-        this.marcarSimulado = marcarSimulado;
-        this.aulaDada = aulaDada;
     }
 
     public Integer getIdtabelaAula() {
@@ -107,12 +98,20 @@ public class TabelaAula implements Serializable {
         this.marcarSimulado = marcarSimulado;
     }
 
-    public short getAulaDada() {
-        return aulaDada;
+    public String getDataTeorica() {
+        return dataTeorica;
     }
 
-    public void setAulaDada(short aulaDada) {
-        this.aulaDada = aulaDada;
+    public void setDataTeorica(String dataTeorica) {
+        this.dataTeorica = dataTeorica;
+    }
+
+    public String getDataPratica() {
+        return dataPratica;
+    }
+
+    public void setDataPratica(String dataPratica) {
+        this.dataPratica = dataPratica;
     }
 
     public Professor getProfessorIdprofessor() {

@@ -78,10 +78,12 @@ public class Login implements Serializable {
         this.nome = nome;
     }
 
-    public Login(String login, String senha, String nome) {
+    public Login( String login, String senha, String nome) {
+       
         this.login = login;
         this.senha = senha;
         this.nome = nome;
+       
     }
     
     
