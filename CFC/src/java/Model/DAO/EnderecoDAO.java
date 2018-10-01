@@ -30,6 +30,35 @@ public class EnderecoDAO extends DaoGeneric{
         
     }
     
+    public Endereco get(String idendereco) {
+        EntityManager em = null;
+        try {
+            em = open();
+        Endereco end = em.getReference(Endereco.class, idendereco);
+            
+            return end;
+            
+        } finally {
+            if (em!= null){
+                em.close();
+            }
+        }
+    }
+
+    public void edit(Endereco end) {
+    EntityManager em = null;
+        try {
+            em = open();
+            em.getTransaction().begin();
+            em.merge(end);
+            em.getTransaction().commit();
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }    
+    }
+    
 //    public Usuario validaLogin(String login, String senha) {
 //        
 //        EntityManager em = null;

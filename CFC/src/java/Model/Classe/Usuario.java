@@ -90,9 +90,9 @@ public class Usuario implements Serializable {
         this.qtdaulaPratica = qtdaulaPratica;
     }
 
-
-    
-    
+    public Usuario(String nota) {
+        this.nota = nota;
+    }
 
     public Usuario(Integer idusuario) {
         this.idusuario = idusuario;

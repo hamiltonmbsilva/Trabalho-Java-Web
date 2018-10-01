@@ -81,7 +81,7 @@ public class UsuarioDAO extends DaoGeneric{
             
             String jpql = "select distinct usu.TabelaAulaList from Usuario usu inner join usu.TabelaAulaList t "
                     + "where usu = :log and (t.aula_teorica = :aula_teorica or t.aula_pratica = :aula_pratica or"
-                    + " t.data_teorica = :data_teorica or data_pratica = :data_pratica) ";
+                    + " t.data_teorica = :data_teorica or t.data_pratica = :data_pratica) ";
             
             Query q = em.createQuery(jpql);
              q.setParameter("log", usu);

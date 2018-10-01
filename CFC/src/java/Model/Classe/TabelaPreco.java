@@ -62,6 +62,13 @@ public class TabelaPreco implements Serializable {
         this.numeroParcela = numeroParcela;
     }
 
+    public TabelaPreco(int valor, int numeroParcela) {
+        this.valor = valor;
+        this.numeroParcela = numeroParcela;
+    }
+    
+    
+
     public Integer getIdtabelaPreco() {
         return idtabelaPreco;
     }

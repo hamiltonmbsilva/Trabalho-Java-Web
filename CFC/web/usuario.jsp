@@ -112,6 +112,24 @@
                                 </a>
                             </li>  
                         </c:if>
+                            
+                         <c:if test="${sessionScope.user != null}">
+                            <li class="sub-menu">
+                                <a href="editUsuarioNota.jsp?page=editUsuarioNota">
+                                    <i class="fa fa-cogs"></i>
+                                    <span>Cadastrar Notas</span>
+                                </a>
+                            </li>  
+                        </c:if> 
+                            
+                        <c:if test="${sessionScope.user != null}">
+                            <li class="sub-menu">
+                                <a href="editarUsuario.jsp?page=editUsuario">
+                                    <i class="fa fa-cogs"></i>
+                                    <span>Confirma novo Usuario</span>
+                                </a>
+                            </li>  
+                        </c:if>      
                         
                             
                         
