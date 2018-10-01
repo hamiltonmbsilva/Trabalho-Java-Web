@@ -90,7 +90,10 @@ public class Usuario implements Serializable {
         this.qtdaulaPratica = qtdaulaPratica;
     }
 
+
     
+    
+
     public Usuario(Integer idusuario) {
         this.idusuario = idusuario;
     }

@@ -17,6 +17,22 @@ import javax.persistence.Query;
  */
 public class TabelaAulaDAO extends DaoGeneric{
     
+    public void save(TabelaAula tab) {
+            
+            EntityManager em = null;
+            try {
+                em = open();
+                em.getTransaction().begin();
+                em.persist(tab);
+                em.getTransaction().commit();
+            } finally {
+                if(em != null){
+                    em.close();
+                }
+            }
+        }
+
+    
     public List<TabelaAula> getAll() {
         EntityManager em = null;
         try {
@@ -48,5 +64,11 @@ public class TabelaAulaDAO extends DaoGeneric{
             }
         }
     }
+
+    
+
+        
+
+   
     
 }

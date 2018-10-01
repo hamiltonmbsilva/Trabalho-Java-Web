@@ -95,13 +95,23 @@
                             </a>
                         </li>
                          </c:if>
-                        <li class="sub-menu">
-                            <a href="control?ac=cadAluno">
-                                <i class="fa fa-cogs"></i>
-                                <span>Verificar Notas</span>
-                            </a>
-                        </li>  
-                        
+                         <c:if test="${sessionScope.user != null}">
+                            <li class="sub-menu">
+                                <a href="cadastrarAula.jsp?page=cadAula">
+                                    <i class="fa fa-cogs"></i>
+                                    <span>Cadastrar Aulas Teoricas</span>
+                                </a>
+                            </li>  
+                        </c:if>
+                            
+                        <c:if test="${sessionScope.user != null}">
+                            <li class="sub-menu">
+                                <a href="CadastrarAulaPratica.jsp?page=cadAulaPratica">
+                                    <i class="fa fa-cogs"></i>
+                                    <span>Cadastrar Aulas Praticas</span>
+                                </a>
+                            </li>  
+                        </c:if>
                         
                             
                         

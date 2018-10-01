@@ -6,11 +6,15 @@
 package Controller.Central;
 
 import Controller.Action.AreaAlunoAction;
+import Controller.Action.CadAulaPratica;
+import Controller.Action.CadAulaTeoricaAction;
 import Controller.Action.CadUsuarioViewAction;
 import Controller.Action.HomeViewAction;
 import Controller.Action.LoginViewAction;
 import Controller.Action.LogoutAction;
 import Controller.Action.MarcarAulasAction;
+import Controller.Action.SaveAulaPraticaAction;
+import Controller.Action.SaveAulaTeoricaAction;
 import Controller.Action.SaveUsuarioAction;
 import Controller.Action.ValidaLoginAction;
 import Controlles.Actions.Faces.ICommander;
@@ -43,6 +47,10 @@ public class CentralController extends HttpServlet {
         tabela.put("saveUsuario", new SaveUsuarioAction());
         tabela.put("areaAluno", new AreaAlunoAction());
         tabela.put("marcarAulasSecured", new MarcarAulasAction());
+        tabela.put("saveAula", new SaveAulaTeoricaAction());
+        tabela.put("cadAula", new CadAulaTeoricaAction());
+        tabela.put("saveAulaPratica", new SaveAulaPraticaAction());
+        tabela.put("cadAulaPratica", new CadAulaPratica());
     }
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

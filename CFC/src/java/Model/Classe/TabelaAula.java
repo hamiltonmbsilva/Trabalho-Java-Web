@@ -6,6 +6,7 @@
 package Model.Classe;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +18,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -48,10 +51,12 @@ public class TabelaAula implements Serializable {
     private String aulaPratica;
     @Column(name = "marcar_simulado", length = 20)
     private String marcarSimulado;
-    @Column(name = "data_teorica", length = 12)
-    private String dataTeorica;
-    @Column(name = "data_pratica", length = 12)
-    private String dataPratica;
+    @Column(name = "data_teorica")
+    @Temporal(TemporalType.DATE)
+    private Date dataTeorica;
+    @Column(name = "data_pratica")
+    @Temporal(TemporalType.DATE)
+    private Date dataPratica;
     @JoinColumn(name = "professor_idprofessor", referencedColumnName = "idprofessor")
     @ManyToOne
     private Professor professorIdprofessor;
@@ -62,6 +67,24 @@ public class TabelaAula implements Serializable {
     public TabelaAula() {
     }
 
+    public TabelaAula(String aulaTeorica, String aulaPratica) {
+        this.aulaTeorica = aulaTeorica;
+        this.aulaPratica = aulaPratica;
+    }
+
+    public TabelaAula(String aulaTeorica) {
+        this.aulaTeorica = aulaTeorica;
+        
+    }
+    
+    
+    
+
+   
+    
+    
+    
+    
     public TabelaAula(Integer idtabelaAula) {
         this.idtabelaAula = idtabelaAula;
     }
@@ -98,19 +121,19 @@ public class TabelaAula implements Serializable {
         this.marcarSimulado = marcarSimulado;
     }
 
-    public String getDataTeorica() {
+    public Date getDataTeorica() {
         return dataTeorica;
     }
 
-    public void setDataTeorica(String dataTeorica) {
+    public void setDataTeorica(Date dataTeorica) {
         this.dataTeorica = dataTeorica;
     }
 
-    public String getDataPratica() {
+    public Date getDataPratica() {
         return dataPratica;
     }
 
-    public void setDataPratica(String dataPratica) {
+    public void setDataPratica(Date dataPratica) {
         this.dataPratica = dataPratica;
     }
 
