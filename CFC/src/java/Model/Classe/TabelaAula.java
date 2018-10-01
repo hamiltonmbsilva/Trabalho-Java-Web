@@ -65,6 +65,7 @@ public class TabelaAula implements Serializable {
     private Usuario usuarioIdusuario;
 
     public TabelaAula() {
+        this.aulaPratica = aulaPratica;
     }
 
     public TabelaAula(String aulaTeorica, String aulaPratica) {

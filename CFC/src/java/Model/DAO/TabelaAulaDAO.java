@@ -50,12 +50,12 @@ public class TabelaAulaDAO extends DaoGeneric{
         }
     }
 
-    public TabelaAula get(int id) {
+    public TabelaAula get(int idtabela_aula) {
         EntityManager em = null;
         try {
             em = open();
 
-            return  em.getReference(TabelaAula.class, id);
+            return  em.getReference(TabelaAula.class, idtabela_aula);
         } catch (Exception e) {
             return null;
         } finally {
@@ -64,9 +64,22 @@ public class TabelaAulaDAO extends DaoGeneric{
             }
         }
     }
-
     
 
+    public void edit(TabelaAula tab) {
+    EntityManager em = null;
+        try {
+            em = open();
+            em.getTransaction().begin();
+            em.merge(tab);
+            em.getTransaction().commit();
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }    
+    }
+    
         
 
    

@@ -30,7 +30,7 @@
         
        
                 <form action="control" method="POST">
-                 <input type="hidden" name="ac" value="cadaulaPratica"/> 
+                 <input type="hidden" name="ac" value="saveAulaPratica"/> 
                     <h2 class="form-login-heading">Cadastrar aulas</h2>
 <!--                    <div class="form-group">
                         <label for="nome">Aula Terorica:</label>
