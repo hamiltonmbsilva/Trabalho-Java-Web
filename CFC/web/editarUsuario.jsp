@@ -37,8 +37,8 @@
             
             Usuario: <select id="pesqUsuario">
                 <option value="1">Selecione</option>
-                <c:forEach items="${requestScope.tabelaAulaList}" var="u">
-                    <option value="${u.idusuario}">${u.aula_teorica}</option>
+                <c:forEach items="${requestScope.listaUsuario}" var="u">
+                    <option value="${u.idusuario}">${u.nome}</option>
                 </c:forEach>
 
                 <thead>

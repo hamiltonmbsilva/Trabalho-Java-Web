@@ -78,14 +78,6 @@ public class TabelaAula implements Serializable {
         
     }
     
-    
-    
-
-   
-    
-    
-    
-    
     public TabelaAula(Integer idtabelaAula) {
         this.idtabelaAula = idtabelaAula;
     }

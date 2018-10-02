@@ -10,6 +10,9 @@ import Model.Classe.Login;
 import Model.Classe.Usuario;
 import Model.DAO.TabelaAulaDAO;
 import Model.DAO.UsuarioDAO;
+import com.sun.istack.internal.logging.Logger;
+import java.util.List;
+import java.util.logging.Level;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,10 +25,21 @@ public class MarcarAulasAction implements ICommander{
 
     @Override
     public void executar(HttpServletRequest request, HttpServletResponse response) throws Exception {
-         RequestDispatcher rd = request.getRequestDispatcher("usuario.jsp?pages=marcarAula");
+        
          
          Login a = (Login) request.getSession().getAttribute("user");
-         request.setAttribute("tabelaAulaList", new TabelaAulaDAO().getAll());
-         rd.forward(request, response);}
+         
+         TabelaAulaDAO tabelaAulaDAO = new TabelaAulaDAO();
+         
+         try {
+            List listaAula = tabelaAulaDAO.getAll();
+            request.setAttribute("marcarListaAula", listaAula);
+            RequestDispatcher rd = request.getRequestDispatcher("usuario.jsp?ac=marcarAula");
+            rd.forward(request, response);
+         
+        } catch (Exception e) {
+            //Logger.getLogger(listaAula.class.getName()).log(Level.SEVERE, null, e);
+        }
+    }
     
 }

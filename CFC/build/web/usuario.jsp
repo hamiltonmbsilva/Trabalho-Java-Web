@@ -149,14 +149,14 @@
                         
                     <div class="row mt">
                         <div class="col-lg-12">    
-                            <c:if test="${param.page == null}">
+                           <c:if test="${param.page == null}">
                                 <jsp:include page="home.jsp" />
                             </c:if>
                             <c:if test="${param.page != null}">
-                                <jsp:include page="marcarAula.jsp" />
+                                <jsp:include page="marcarAula.jsp" /> 
                             </c:if> 
                         </div>
-                        <div class="col-lg-12">    
+                        <div class="col-lg-12">   
                                                     
 
 

@@ -56,6 +56,23 @@ public class UsuarioDAO extends DaoGeneric{
         }
     }
     
+    public List<Usuario> getAllUsuario() {
+        EntityManager em = null;
+        try {
+            em = open();
+
+            Query q = em.createNamedQuery("Usuario.findAll");
+
+            return q.getResultList();
+        } catch (Exception e) {
+            return new ArrayList<>();
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }
+    }
+    
     public List<Endereco> getIdusuario(Usuario u) {
         EntityManager em = null;
         try {

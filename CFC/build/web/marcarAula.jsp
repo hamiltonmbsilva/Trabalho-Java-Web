@@ -6,6 +6,10 @@
 
 
 
+
+<%@page import="Model.Classe.TabelaAula"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="css/stayle.css" rel="stylesheet" id="bootstrap-css">
@@ -14,8 +18,9 @@
 <script src="js/jquery-1.11.2.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<form action="control" method="POST">
-    <input type="hidden" name="ac" value="marcarAulasSecured" />
+<form action="controla?ac=marcarAulasSecured" method="POST">
+    <!--<input type="hidden" name="ac" value="marcarAulasSecured" />-->
+   
         <div class="container  col-md-12" id="tabela">
                 <div class="row  col-md-12">
                         <h2>Tabela de Aulas</h2>
@@ -38,17 +43,47 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="success">
-                                        <c:forEach var="aula" items="${requestScop.TabelaAula}">
-                                            <td value="${aula.idtabela_aula}">${aula.idtabela_aula}</td>
-                                            <td>aula.data_teorica</td>
-                                            <td>aula.data_pratica</td>
-                                            <td>aula.aula_teorica</td>
-                                            <td>aula.aula_paratica</td>
-                                            <td>aula.professor_idprofessor/td> 
-                                            <td><button id="btn-admin" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span> Marcar aula</button></td>
-                                        </c:forEach>
-                                    </tr>
+                                    <%-- <c:forEach items="${requestScop.lista}" var="aula" > --%>
+                                    
+                                    
+                                        <c:forEach items="${marcarListaAula}" var="listaAula" > 
+                                            <tr class="success">
+                                                <td>${listaAula['idtabelaAula']}</td>
+                                                <td>${listaAula['dataTeorica']}</td>
+                                                <td>${listaAula['dataPratica']}</td>
+                                                <td>${listaAula['aulaTeorica']}</td>
+                                                <td>${listaAula['aulaParatica']}</td>
+                                                <td>${listaAula['professorIdprofessor.nome']}</td> 
+                                                <td><button id="btn-admin" class="btn btn-default" href="controla?ac=marcarAulasSecured"> Marcar aula</button></td>
+                                             </tr>
+                                         </c:forEach>
+                                             
+                                             
+<!--                                             <%--
+                                                 List listaAula = (List) request.getAttribute("marcarListaAula");
+                                                 for(Iterator iterator = listaAula.iterator(); iterator.hasNext();){
+                                                     TabelaAula tabelaAula = (TabelaAula) iterator.next();%>
+                                                     
+                                                     <tr class="success">
+                                                <td><%=tabelaAula.getIdtabelaAula()%></td>
+                                                <td><%=tabelaAula.getAulaTeorica()%></td>
+                                                <td><%=tabelaAula.getAulaPratica()%></td>
+                                                <td><%=tabelaAula.getDataTeorica()%></td>
+                                                <td><%=tabelaAula.getDataPratica()%></td>
+                                                <td><%=tabelaAula.getProfessorIdprofessor()%></td>
+                                                <td>${listaAula['dataTeorica']}</td>
+                                                <td>${listaAula['dataPratica']}</td>
+                                                <td>${listaAula['aulaTeorica']}</td>
+                                                <td>${listaAula['aulaParatica']}</td>
+                                                <td>${listaAula['professorIdprofessor.nome']}</td> 
+                                                <td><button id="btn-admin" class="btn btn-default" href="controla?ac=marcarAulasSecured"> Marcar aula</button></td>
+                                             </tr>
+                                             <%
+                                                 }
+                                             
+                                             
+                                             --%>
+                                   -->
 
                                 </tbody>
                             </table>
