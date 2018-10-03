@@ -12,7 +12,6 @@ import Model.DAO.UsuarioDAO;
 import Model.Classe.Endereco;
 import Model.Classe.Login;
 import Model.Classe.Usuario;
-import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
 import java.text.SimpleDateFormat;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

@@ -15,6 +15,7 @@ import Controller.Action.HomeViewAction;
 import Controller.Action.LoginViewAction;
 import Controller.Action.LogoutAction;
 import Controller.Action.MarcarAulasAction;
+import Controller.Action.SalvaAulasMarcadasAction;
 import Controller.Action.SaveAulaPraticaAction;
 import Controller.Action.SaveAulaTeoricaAction;
 import Controller.Action.SaveUsuarioAction;
@@ -55,6 +56,7 @@ public class CentralController extends HttpServlet {
         tabela.put("cadAulaPratica", new CadAulaPratica());
         tabela.put("editUsuarioNota", new EditNotaAlunoAction());
         tabela.put("editUsuario", new EditUsuarioAction());
+        tabela.put("aulaMarcar", new SalvaAulasMarcadasAction());
     }
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

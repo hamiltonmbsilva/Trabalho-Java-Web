@@ -8,7 +8,6 @@ package Controller.Action;
 import Controlles.Actions.Faces.ICommander;
 import Model.Classe.TabelaAula;
 import Model.DAO.TabelaAulaDAO;
-import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
 import java.text.SimpleDateFormat;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

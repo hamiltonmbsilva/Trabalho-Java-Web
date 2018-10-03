@@ -10,7 +10,6 @@ import Model.Classe.Login;
 import Model.Classe.Usuario;
 import Model.DAO.TabelaAulaDAO;
 import Model.DAO.UsuarioDAO;
-import com.sun.istack.internal.logging.Logger;
 import java.util.List;
 import java.util.logging.Level;
 import javax.servlet.RequestDispatcher;
@@ -34,7 +33,7 @@ public class MarcarAulasAction implements ICommander{
          try {
             List listaAula = tabelaAulaDAO.getAll();
             request.setAttribute("marcarListaAula", listaAula);
-            RequestDispatcher rd = request.getRequestDispatcher("usuario.jsp?ac=marcarAula");
+            RequestDispatcher rd = request.getRequestDispatcher("usuario.jsp?page=marcarAula");
             rd.forward(request, response);
          
         } catch (Exception e) {

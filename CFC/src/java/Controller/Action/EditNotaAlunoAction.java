@@ -21,17 +21,17 @@ public class EditNotaAlunoAction implements ICommander{
     public void executar(HttpServletRequest request, HttpServletResponse response) throws Exception {
         
        Usuario usu= new Usuario(
-                    
-//                request.getParameter("email"),               
-//                request.getParameter("cpf"),
-//                request.getParameter("rg"),
-//                request.getParameter("ativado"),
-//                request.getParameter("dataNascimento"),
-                request.getParameter("nota")
-//                request.getParameter("qtd_aulaTeorica"),
-//                request.getParameter("qtd_aulaPratica") 
+               Integer.parseInt(request.getParameter("idusuario")),     
+               request.getParameter("email"),               
+                request.getParameter("cpf"),
+               request.getParameter("rg"),
+                request.getParameter("ativado"),
+                request.getParameter("dataNascimento"),
+                request.getParameter("nota"),
+               request.getParameter("qtd_aulaTeorica"),
+               request.getParameter("qtd_aulaPratica") 
                 );
-        new UsuarioDAO().edit(usu);
+        new UsuarioDAO().save(usu);
         //usu.setLoginIdlogin(log);
                 
         request.setAttribute("info", "Editado com Sucesso");

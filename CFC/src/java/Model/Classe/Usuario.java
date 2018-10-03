@@ -90,6 +90,20 @@ public class Usuario implements Serializable {
         this.qtdaulaPratica = qtdaulaPratica;
     }
 
+    public Usuario(Integer idusuario, String email, String cpf, String rg, String ativado, String dataNascimento, String nota, String qtdaulaTeorica, String qtdaulaPratica) {
+        this.idusuario = idusuario;
+        this.email = email;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.ativado = ativado;
+        this.dataNascimento = dataNascimento;
+        this.nota = nota;
+        this.qtdaulaTeorica = qtdaulaTeorica;
+        this.qtdaulaPratica = qtdaulaPratica;
+    }
+    
+    
+
     public Usuario(String nota) {
         this.nota = nota;
     }

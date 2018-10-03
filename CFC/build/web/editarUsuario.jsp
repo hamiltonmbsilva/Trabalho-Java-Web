@@ -19,7 +19,7 @@
 
 
 <form action="control" method="POST">
-<input type="hidden" name="ac" value="editUsuarioNota"/> 
+<input type="hidden" name="ac" value="editUsuario"/> 
 
     <div class="container">
         <div class="row">
@@ -37,7 +37,7 @@
             
             Usuario: <select id="pesqUsuario">
                 <option value="1">Selecione</option>
-                <c:forEach items="${requestScope.listaUsuario}" var="u">
+                <c:forEach items="${requestScope.editarUsuario}" var="u">
                     <option value="${u.idusuario}">${u.nome}</option>
                 </c:forEach>
 
@@ -48,12 +48,12 @@
                         <th>Excluir</th>
                     </thead>
             <tbody id="tabela">
-                 <c:if test="${requestScope.lista.size() == 0}">
+                 <c:if test="${listaUsuario.size() == 0}">
                      <tr>
                          <td colspan="5">  Não há Matriculas </td>
                      </tr>
                  </c:if> 
-                 <c:forEach items="${requestScope.usuarioList}" var="u">   
+                 <c:forEach items="${requestScope.listaUsuario}" var="u">   
                     <tr>    
                        <td>${u.nome}</td>
                        <td>$(u.nota)</td>                

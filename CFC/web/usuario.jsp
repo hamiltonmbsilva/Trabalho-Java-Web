@@ -33,7 +33,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body><section id="container">
+    <body>
+        <section id="container">
             <!--header start-->
             <header class="header black-bg">
                 <div class="sidebar-toggle-box">
@@ -79,9 +80,10 @@
                             </li>                        
                         </c:if>
                           
-                            <c:if test="${sessionScope.login == usu}">
+                           <%-- <c:if test="${sessionScope.tipoUser == 'usuario'}">--%>
+                                 <c:if test="${sessionScope.user != null}">
                         <li class="sub-menu">
-                            <a href="usuario.jsp?page=marcarAulasSecured">
+                            <a href="control?ac=marcarAulasSecured">
                                 <i class="fa fa-cogs"></i>
                                 <span>Marcar Aulas</span>
                             </a>
@@ -97,7 +99,7 @@
                          </c:if>
                          <c:if test="${sessionScope.user != null}">
                             <li class="sub-menu">
-                                <a href="cadastrarAula.jsp?page=cadAula">
+                                <a href="control?ac=cadAula">
                                     <i class="fa fa-cogs"></i>
                                     <span>Cadastrar Aulas Teoricas</span>
                                 </a>
@@ -106,7 +108,7 @@
                             
                         <c:if test="${sessionScope.user != null}">
                             <li class="sub-menu">
-                                <a href="CadastrarAulaPratica.jsp?page=cadAulaPratica">
+                                <a href="control?ac=cadAulaPratica">
                                     <i class="fa fa-cogs"></i>
                                     <span>Cadastrar Aulas Praticas</span>
                                 </a>
@@ -115,7 +117,7 @@
                             
                          <c:if test="${sessionScope.user != null}">
                             <li class="sub-menu">
-                                <a href="editUsuarioNota.jsp?page=editUsuarioNota">
+                                <a href="control?ac=editUsuarioNota">
                                     <i class="fa fa-cogs"></i>
                                     <span>Cadastrar Notas</span>
                                 </a>
@@ -124,7 +126,7 @@
                             
                         <c:if test="${sessionScope.user != null}">
                             <li class="sub-menu">
-                                <a href="editarUsuario.jsp?page=editUsuario">
+                                <a href="control?ac=editUsuario">
                                     <i class="fa fa-cogs"></i>
                                     <span>Confirma novo Usuario</span>
                                 </a>

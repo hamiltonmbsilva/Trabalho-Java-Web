@@ -90,7 +90,7 @@ public class SaveUsuarioEdtAction implements ICommander{
                 request.setAttribute("info", "Salvo com Sucesso");
                 request.setAttribute("jsAlertAtivo", true);
       
-               new AreaAlunoAction().executar(request, response); 
+               new EditUsuarioAction().executar(request, response); 
     }
     
 }

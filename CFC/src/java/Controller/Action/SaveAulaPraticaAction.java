@@ -23,7 +23,7 @@ public class SaveAulaPraticaAction implements ICommander {
          SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         
        TabelaAula tab = new TabelaAula(   
-                //request.getParameter("aulaTeorica"),               
+                request.getParameter("aulaTeorica"),               
                 request.getParameter("aulaPratica")
                 );
        //tab.setDataTeorica( sdf.parse(request.getParameter("dataAulaTeorica")));

@@ -77,6 +77,10 @@ public class TabelaAula implements Serializable {
         this.aulaTeorica = aulaTeorica;
         
     }
+
+    public TabelaAula(Usuario usuarioIdusuario) {
+        this.usuarioIdusuario = usuarioIdusuario;
+    } 
     
     public TabelaAula(Integer idtabelaAula) {
         this.idtabelaAula = idtabelaAula;
