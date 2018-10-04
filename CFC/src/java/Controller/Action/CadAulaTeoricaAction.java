@@ -19,7 +19,7 @@ public class CadAulaTeoricaAction  implements ICommander{
     @Override
     public void executar(HttpServletRequest request, HttpServletResponse response) throws Exception {
         
-        RequestDispatcher rd = request.getRequestDispatcher("cadastrarAula.jsp?page=saveAula");
+        RequestDispatcher rd = request.getRequestDispatcher("templateAreaUsuario.jsp?page=cadastrarAula");
         rd.forward(request, response);
     }
     

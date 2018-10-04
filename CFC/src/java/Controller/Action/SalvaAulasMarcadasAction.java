@@ -7,6 +7,7 @@ package Controller.Action;
 
 import Controlles.Actions.Faces.ICommander;
 import Model.Classe.TabelaAula;
+import Model.Classe.Usuario;
 import Model.DAO.TabelaAulaDAO;
 import java.text.SimpleDateFormat;
 import javax.servlet.http.HttpServletRequest;
@@ -21,16 +22,18 @@ public class SalvaAulasMarcadasAction implements ICommander{
     @Override
     public void executar(HttpServletRequest request, HttpServletResponse response) throws Exception {
         
-        //SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Usuario pessoa = new Usuario( Integer.parseInt(request.getParameter("idusuario")));
         
-       TabelaAula tab = new TabelaAula(   
-                request.getParameter("usuarioIdusuario")               
-                //request.getParameter("aulaPratica")
+        
+       TabelaAula tab = new TabelaAula( 
+              
+                Integer.parseInt(request.getParameter("idTabela")),
+                pessoa                
                 );
        //tab.setDataTeorica( sdf.parse(request.getParameter("dataAulaTeorica")));
        //tab.setDataPratica(sdf.parse(request.getParameter("dataAulaPratica"))); 
        
-        new TabelaAulaDAO().save(tab);
+        new TabelaAulaDAO().edit(tab);
 //           new TabelaAulaDAO().save(tab1);
           
           request.setAttribute("info", "Salvo com Sucesso");

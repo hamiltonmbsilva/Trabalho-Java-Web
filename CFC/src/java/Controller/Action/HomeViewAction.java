@@ -20,7 +20,7 @@ public class HomeViewAction implements  ICommander{
     @Override
     public void executar(HttpServletRequest request, HttpServletResponse response) throws Exception {
        
-        RequestDispatcher rd = request.getRequestDispatcher("home.jsp?page=home");
+        RequestDispatcher rd = request.getRequestDispatcher("templateAreaUsuario.jsp?page=home");
          rd.forward(request, response);
     }
 }

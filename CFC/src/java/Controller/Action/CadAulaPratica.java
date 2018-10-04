@@ -20,7 +20,7 @@ public class CadAulaPratica implements ICommander{
 
     @Override
     public void executar(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        RequestDispatcher rd = request.getRequestDispatcher("CadastrarAulaPratica.jsp?page=saveAulaPratica");
+        RequestDispatcher rd = request.getRequestDispatcher("templateAreaUsuario.jsp?page=CadastrarAulaPratica");
         rd.forward(request, response);}
     
 }

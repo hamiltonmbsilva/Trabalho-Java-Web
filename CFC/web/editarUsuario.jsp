@@ -4,22 +4,22 @@
     Author     : Hamil
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="java.io.File"%>
+
 
 <link href="boostrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="boostrap/js/bootstrap.min.js"></script>
+
+<form action="control?ac=editUsuario" method="POST">
+<!--<form action="control" method="POST">
+<input type="hidden" name="ac" value="editUsuario"/> -->
 
 <h3>Minhas Matriculas :: 
     <c:if test="${sessionScope.user != null}">        
         ${sessionScope.user.nome}
     </c:if>
 </h3><hr />
-
-
-<form action="control" method="POST">
-<input type="hidden" name="ac" value="editUsuario"/> 
 
     <div class="container">
         <div class="row">
@@ -38,7 +38,7 @@
             Usuario: <select id="pesqUsuario">
                 <option value="1">Selecione</option>
                 <c:forEach items="${requestScope.editarUsuario}" var="u">
-                    <option value="${u.idusuario}">${u.nome}</option>
+                    <option value="${u.idusuario}">${u}</option>
                 </c:forEach>
 
                 <thead>
@@ -48,14 +48,14 @@
                         <th>Excluir</th>
                     </thead>
             <tbody id="tabela">
-                 <c:if test="${listaUsuario.size() == 0}">
+                <c:if test="${requestScope.editarUsuario.size() == 0}">
                      <tr>
-                         <td colspan="5">  NÃ£o hÃ¡ Matriculas </td>
+                         <td colspan="5">  Não há Matriculas </td>
                      </tr>
                  </c:if> 
-                 <c:forEach items="${requestScope.listaUsuario}" var="u">   
+                 <c:forEach items="${requestScope.editarUsuario}" var="u">   
                     <tr>    
-                       <td>${u.nome}</td>
+                       <td></td>
                        <td>$(u.nota)</td>                
                        <td><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" href="control?ac=editUsuario&id=${u.idusuario}"></button></td>
                        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
@@ -105,7 +105,7 @@
             </div>
           </div>
               <div class="modal-footer ">
-            <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span>Â Update</button>
+            <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
           </div>
             </div>
         <!-- /.modal-content --> 
@@ -128,8 +128,8 @@
 
           </div>
             <div class="modal-footer ">
-            <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span>Â Yes</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>Â No</button>
+            <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
           </div>
             </div>
         <!-- /.modal-content --> 

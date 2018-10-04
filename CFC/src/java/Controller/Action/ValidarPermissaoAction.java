@@ -21,7 +21,7 @@ public class ValidarPermissaoAction implements ICommander{
         
          if (request.getSession().getAttribute("user") == null) {
             request.setAttribute("info", "Acesso Negado, efetue o login");
-            RequestDispatcher rd = request.getRequestDispatcher("usuario.jsp?page=login");
+            RequestDispatcher rd = request.getRequestDispatcher("templateAreaUsuario.jsp?page=login");
             rd.forward(request, response);
         }
     }

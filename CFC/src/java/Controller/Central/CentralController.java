@@ -19,7 +19,10 @@ import Controller.Action.SalvaAulasMarcadasAction;
 import Controller.Action.SaveAulaPraticaAction;
 import Controller.Action.SaveAulaTeoricaAction;
 import Controller.Action.SaveUsuarioAction;
+import Controller.Action.SaveUsuarioEdtAction;
+import Controller.Action.SaveUsuarioNotaAction;
 import Controller.Action.ValidaLoginAction;
+import Controller.Action.ValidarPermissaoAction;
 import Controlles.Actions.Faces.ICommander;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -57,6 +60,9 @@ public class CentralController extends HttpServlet {
         tabela.put("editUsuarioNota", new EditNotaAlunoAction());
         tabela.put("editUsuario", new EditUsuarioAction());
         tabela.put("aulaMarcar", new SalvaAulasMarcadasAction());
+        tabela.put("salveUsuarioEdit", new SaveUsuarioEdtAction());
+        tabela.put("salveUsuarioNota", new SaveUsuarioNotaAction());
+        tabela.put("validarPermissao", new ValidarPermissaoAction());
     }
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

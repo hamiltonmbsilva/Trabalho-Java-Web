@@ -54,7 +54,8 @@
                                                 <td>${listaAula.dataPratica}</td>
                                                 <td>${listaAula.dataTeorica}</td>
                                                 <td>${listaAula.professorIdprofessor}</td> 
-                                                <td><button id="btn-admin" class="btn btn-default" href="controla?ac=aulaMarcar"> Marcar aula</button></td>
+                                                <td><button id="btn-admin" class="btn btn-default" href="control?ac=aulaMarcar&idUsuario=${listaAula.getUsuarioIdusuario()}
+                                                            &idTabela=${listaAula.getIdtabelaAula()}"> Marcar aula</button></td>
                                              </tr>
                                          </c:forEach> 
                                              

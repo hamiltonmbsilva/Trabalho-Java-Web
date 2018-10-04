@@ -17,9 +17,9 @@
     </c:if>
 </h3><hr />
 
-
-<form action="control" method="POST">
-<input type="hidden" name="ac" value="editUsuarioNota"/> 
+<form action="control?ac=editUsuarioNota" method="POST">
+<!--<form action="control" method="POST">
+<input type="hidden" name="ac" value="editUsuarioNota"/> -->
 
     <div class="container">
         <div class="row">
@@ -37,8 +37,8 @@
             
             Usuario: <select id="pesqUsuario">
                 <option value="1">Selecione</option>
-                <c:forEach items="${requestScope.tabelaAulaList}" var="u">
-                    <option value="${u.idusuario}">${u.aula_teorica}</option>
+                <c:forEach items="${requestScope.editarUsuNota}" var="u">
+                    <option value="${u.idusuario}"></option>
                 </c:forEach>
 
                 <thead>
@@ -48,14 +48,14 @@
                         <th>Excluir</th>
                     </thead>
             <tbody id="tabela">
-                 <c:if test="${requestScope.lista.size() == 0}">
+                 <c:if test="${requestScope.editarUsuNota.size() == 0}">
                      <tr>
                          <td colspan="5">  Não há Matriculas </td>
                      </tr>
                  </c:if> 
-                 <c:forEach items="${requestScope.usuarioList}" var="u">   
+                 <c:forEach items="${requestScope.editarUsuNota}" var="u">   
                     <tr>    
-                       <td>${u.nome}</td>
+                       <td>${u.loginIdlogin.nome}</td>
                        <td>$(u.nota)</td>                
                        <td><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" href="control?ac=editUsuario&id=${u.idusuario}"></button></td>
                        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>

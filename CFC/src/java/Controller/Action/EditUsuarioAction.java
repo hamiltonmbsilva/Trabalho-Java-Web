@@ -6,6 +6,7 @@
 package Controller.Action;
 
 import Controlles.Actions.Faces.ICommander;
+import Model.Classe.Login;
 import Model.DAO.UsuarioDAO;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -21,12 +22,14 @@ public class EditUsuarioAction implements ICommander{
     @Override
     public void executar(HttpServletRequest request, HttpServletResponse response) throws Exception {
         
+        Login a = (Login) request.getSession().getAttribute("user");
+        
         UsuarioDAO usuarioDAO = new UsuarioDAO();
          
          try {
             List listaUsuario = usuarioDAO.getAllUsuario();
             request.setAttribute("editarUsuario", listaUsuario);
-            RequestDispatcher rd = request.getRequestDispatcher("usuario.jsp?page=editarUsuario");
+            RequestDispatcher rd = request.getRequestDispatcher("templateAreaUsuario.jsp?page=editarUsuario");
             rd.forward(request, response);
          
         } catch (Exception e) {

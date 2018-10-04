@@ -33,7 +33,7 @@ public class MarcarAulasAction implements ICommander{
          try {
             List listaAula = tabelaAulaDAO.getAll();
             request.setAttribute("marcarListaAula", listaAula);
-            RequestDispatcher rd = request.getRequestDispatcher("usuario.jsp?page=marcarAula");
+            RequestDispatcher rd = request.getRequestDispatcher("templateAreaUsuario.jsp?page=marcarAula");
             rd.forward(request, response);
          
         } catch (Exception e) {

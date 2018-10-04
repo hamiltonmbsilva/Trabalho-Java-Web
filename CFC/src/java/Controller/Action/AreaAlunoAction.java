@@ -20,7 +20,7 @@ public class AreaAlunoAction implements  ICommander{
     @Override
     public void executar(HttpServletRequest request, HttpServletResponse response) throws Exception {
        
-        RequestDispatcher rd = request.getRequestDispatcher("usuario.jsp?page=usuario");
+        RequestDispatcher rd = request.getRequestDispatcher("templateAreaUsuario.jsp?pages=templateAreaUsuario");
          rd.forward(request, response);
     }
 }
